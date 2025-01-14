@@ -1,0 +1,21 @@
+.add-cargo-form__wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+.td-status_yellow,
+.cargo-list .td-status_yellow{
+    background-color: yellow;
+}
+
+.td-status_blue,
+.cargo-list .td-status_blue{
+    background-color: blue;
+}
+
+.td-status_green,
+.cargo-list .td-status_green{
+    background-color: green;
+}
