@@ -35,3 +35,7 @@
 .tr_hidden{
     display: none;
 }
+
+.error{
+    color: red;
+}

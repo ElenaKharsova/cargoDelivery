@@ -68,9 +68,17 @@ export function addNewCargo(){
     const cargoDestination = document.getElementById("cargoDestination").value;
     const cargoStatus = document.getElementById("statuses").value;
     const cargoDepartureDate = document.getElementById("cargoDepartureDate").value;
-
-    cargoList.push(new Cargo(cargoName, cargoStatus, cargoOrigin, cargoDestination, cargoDepartureDate)); 
-    showCargoList();
+    const labelError = document.querySelector(".error");
+    if(!cargoName || !cargoOrigin || !cargoDestination || !cargoDepartureDate){
+        labelError.innerText = "Все поля должны быть заполнены!"
+    } else {
+        labelError.innerText = "";
+        cargoList.push(new Cargo(cargoName, cargoStatus, cargoOrigin, cargoDestination, cargoDepartureDate)); 
+        const filter = document.querySelector("#filter-statuses");
+        filter.classList.add("td-status_white");
+        filter.querySelectorAll("option")[0].setAttribute("selected", "");
+        showCargoList();
+    }
 }
 
 
