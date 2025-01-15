@@ -33,7 +33,6 @@ class Cargo{
 }
 
 function showCargoList(){
-    console.log("showCargoList")
     const tbody = document.querySelector(".tbody");
     tbody.innerHTML = "";
     for(let i = 0; i < cargoList.length; i++){
@@ -43,7 +42,6 @@ function showCargoList(){
             const field = cargoList[i];
             const td = document.createElement("td");
             tr.appendChild(td);
-            console.log("key", key)
             if (key === "status"){
                 let select = document.createElement("select");
                 select.setAttribute("id", `cargoStatus${i}`);
@@ -64,14 +62,19 @@ export function addNewCargo(){
     event.preventDefault();
     const cargoName = document.getElementById("cargoName").value;
     const cargoOrigin = document.getElementById("cargoOrigin").value;
-    console.log("cargoOrigin", cargoOrigin);
     const cargoDestination = document.getElementById("cargoDestination").value;
     const cargoStatus = document.getElementById("statuses").value;
     const cargoDepartureDate = document.getElementById("cargoDepartureDate").value;
-    console.log("cargoDestination", cargoDestination);
 
     cargoList.push(new Cargo(cargoName, cargoStatus, cargoOrigin, cargoDestination, cargoDepartureDate)); 
-    console.log("add new cargo", cargoList);       
-
     showCargoList();
 }
+
+
+document.querySelector(".cargo-list").addEventListener("change", (event)=>{
+    const select = event.target;
+    const selectedValue = select.value;
+    const index = +select.getAttribute("id").substring(11);
+    cargoList[index].status = selectedValue;
+    select.className = `td-status_${status[selectedValue].color}`;
+  })
