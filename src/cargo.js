@@ -1,6 +1,9 @@
 let cargoNumber = 0;
 
-const status = {
+export const status = {
+    "0": {status: "Все",
+        color: "white"
+    },
     "1": {
         status: "Ожидает отправки",
         color: "yellow"
@@ -77,4 +80,10 @@ document.querySelector(".cargo-list").addEventListener("change", (event)=>{
     const index = +select.getAttribute("id").substring(11);
     cargoList[index].status = selectedValue;
     select.className = `td-status_${status[selectedValue].color}`;
+    const options = select.querySelectorAll("option");
+    options.forEach(option => {
+        option.removeAttribute("selected");
+    });
+    options[selectedValue-1].setAttribute("selected", "");
+    console.log("cargoList", cargoList);
   })

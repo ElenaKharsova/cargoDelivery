@@ -24,6 +24,14 @@
     background-color: green;
 }
 
+.td-status_white{
+    background-color: white;
+}
+
 .filter{
     margin-bottom: 30px;
+}
+
+.tr_hidden{
+    display: none;
 }
