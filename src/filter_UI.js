@@ -9,9 +9,11 @@ document.querySelector(".filter").innerHTML = `
 </select>`
 
 document.querySelector("#filter-statuses").addEventListener("change", (event)=>{
+    document.querySelector(".error").innerHTML = "";
+    document.querySelector(".table__error").innerHTML = "";
+
     const select = event.target;
     const selectedValue = event.target.value;
-    console.log("selectedValue", selectedValue);
     if(selectedValue !== 0){
         select.className = `td-status_${status[selectedValue].color}`;
         const rows = document.querySelectorAll(".cargo-list tr");
@@ -19,7 +21,6 @@ document.querySelector("#filter-statuses").addEventListener("change", (event)=>{
             row.classList.remove("tr_hidden");
         })
         const notSelected = document.querySelectorAll(`.cargo-list tr:has(select option[value="${selectedValue}"]:not([selected]))`);
-        console.log("notSelected", notSelected);
         notSelected.forEach(row => {
             row.classList.add("tr_hidden");
         })

@@ -9,7 +9,7 @@ const citiesDestination = ["Сочи", "Тверь", "Краснодар"];
 
 document.querySelector(".add-cargo-form").innerHTML = `
 <fieldset class="add-cargo-form__wrapper">
-    <label class = "error"> </label>
+    <label class = "error"></label>
     <input
         id="cargoName"
         type="text"
