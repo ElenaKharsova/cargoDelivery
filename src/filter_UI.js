@@ -1,7 +1,7 @@
 import {status} from "./cargo.js"
 document.querySelector(".filter").innerHTML = `
 <label><b>Отфильтровать таблицу по статусу</b></label>
-<select id = "filter-statuses">
+<select id = "filter-statuses" class = "border-radius__small">
     <option value="0" class="td-status_white">Все</option>
     <option value="1" class="td-status_yellow">Ожидает отправки</option>
     <option value="2" class="td-status_blue">В пути</option>

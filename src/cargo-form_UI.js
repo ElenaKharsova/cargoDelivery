@@ -8,19 +8,19 @@ const citiesOrigin = [
 const citiesDestination = ["Сочи", "Тверь", "Краснодар"];
 
 document.querySelector(".add-cargo-form").innerHTML = `
-<fieldset class="add-cargo-form__wrapper">
+<fieldset class="add-cargo-form__wrapper border-radius__big">
     <label class = "error"></label>
     <input
         id="cargoName"
         type="text"
-        class="add-cargo-form__field"
+        class="add-cargo-form__field border-radius__small"
         placeholder="Название груза"
     />
     <input
         id="cargoOrigin"
         type="text"
         list="originList"
-        class="add-cargo-form__field"
+        class="add-cargo-form__field border-radius__small"
         placeholder="Пункт отправления"
     />
     <datalist id="originList"></datalist>
@@ -28,22 +28,22 @@ document.querySelector(".add-cargo-form").innerHTML = `
         id="cargoDestination"
         type="text"
         list="destinationList"
-        class="add-cargo-form__field"
+        class="add-cargo-form__field border-radius__small"
         placeholder="Пункт назначения"
     />
     <datalist id="destinationList"></datalist>
     <input
         id="cargoDepartureDate"
         type="date"
-        class="add-cargo-form__field"
+        class="add-cargo-form__field border-radius__small"
         placeholder="Дата отправления"
     />
-    <select id = "statuses">
+    <select id = "statuses" class = "border-radius__small">
         <option value="1" class="td-status_yellow" selected>Ожидает отправки</option>
         <option value="2" class="td-status_blue">В пути</option>
         <option value="3" class="td-status_green">Доставлен</option>
     </select>
-    <button class="add-cargo__btn">Add new cargo</button>
+    <button class="add-cargo__btn border-radius__big">Добавить груз</button>
 </fieldset>
 `;
 

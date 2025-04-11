@@ -1,8 +1,53 @@
+:root {
+    --border-style: solid black 1px;
+    --border-radius: 12px;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+.border-radius__big {
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.53);
+}
+
+.border-radius__small {
+    border: var(--border-style);
+    border-radius: 5px;
+}
+
+.table-wrap {
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+caption {
+    padding: 12px 16px;
+}
+
 .add-cargo-form__wrapper{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 300px;
+    padding: 16px;
+}
+
+.add-cargo-form__wrapper > * {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.add-cargo__btn {
+    width: 150px;
+    margin: 5px 0 0 0;
+    background-color: #0B50D3;
+    color: white;
 }
 
 .table-responsive{
@@ -16,12 +61,12 @@
 
 .td-status_blue,
 .cargo-list .td-status_blue{
-    background-color: blue;
+    background-color: #007bff;
 }
 
 .td-status_green,
 .cargo-list .td-status_green{
-    background-color: green;
+    background-color: #4cf09e;
 }
 
 .td-status_white{
@@ -29,7 +74,7 @@
 }
 
 .filter{
-    margin-bottom: 30px;
+    margin-bottom: 30px;    
 }
 
 .tr_hidden{
