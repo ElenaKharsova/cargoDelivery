@@ -33,4 +33,7 @@
 
 Result of work you can see in https://elenakharsova.github.io/cargoDelivery/
 
-![image](https://github.com/user-attachments/assets/741a2117-fc4d-467c-8b46-e0db2dd16d66)
+![image](https://github.com/user-attachments/assets/b6e0594f-c713-41f2-9b96-f139ffebbbdf)
+
+![image](https://github.com/user-attachments/assets/cf4d2735-f7b1-45ba-81a4-f871d919a054)
+
